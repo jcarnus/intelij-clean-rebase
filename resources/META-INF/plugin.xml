@@ -5,7 +5,7 @@
     <vendor email="jeremy@carnus.me" url="http://www.carnus.com">Jeremy Carnus</vendor>
 
     <description><![CDATA[
-      Provides Clean Rebasing for CodeCollab PMP Process Review
+      Provides Clean Rebasing for CodeCollab Process Review (Based on a Feature branch that get pushed into CodeCollab)
     ]]></description>
 
     <change-notes><![CDATA[
