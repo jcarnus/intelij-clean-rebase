@@ -1,0 +1,39 @@
+<idea-plugin>
+    <id>com.carnus</id>
+    <name>Clean Rebasing</name>
+    <version>1.0</version>
+    <vendor email="jeremy@carnus.me" url="http://www.carnus.com">Jeremy Carnus</vendor>
+
+    <description><![CDATA[
+      Provides Clean Rebasing for CodeCollab PMP Process Review
+    ]]></description>
+
+    <change-notes><![CDATA[
+      See PMP Process Review
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+
+    <depends>com.intellij.modules.all</depends>
+
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="com.carnus.intelij.action.RebaseAction" class="com.carnus.intelij.action.RebaseAction"
+                text="Clean Rebase Current onto Selected" description="Rebase for CodeCollab Action">
+            <add-to-group group-id="Git.Log.ContextMenu" anchor="after" relative-to-action="Git.BranchOperationGroup"/>
+        </action>
+
+
+    </actions>
+
+</idea-plugin>
