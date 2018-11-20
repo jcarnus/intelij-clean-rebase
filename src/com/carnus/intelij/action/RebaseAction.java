@@ -40,8 +40,10 @@ public class RebaseAction extends AnAction {
             final Optional<GitCommit> optionalGitCommit = commitsOnSelected.stream().filter(commitsOnCurrent::contains).findFirst();
 
             GitCommit firstCommitInCommon = optionalGitCommit.orElseThrow(() -> new RuntimeException(String.format("Current branch '%s' has not been forked from selected '%s'", currentBranchName, selectedBranchName)));
+            int indexOfFirstCommitInCommon = commitsOnCurrent.indexOf(firstCommitInCommon);
+            List<GitCommit> commitsToRebase = commitsOnCurrent.subList(0, indexOfFirstCommitInCommon);
 
-            System.out.println(firstCommitInCommon);
+            System.out.println(commitsToRebase);
         } catch (Exception exception) {
             exception.printStackTrace();
         }
